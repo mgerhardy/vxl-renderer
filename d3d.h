@@ -160,7 +160,7 @@ struct upload_scene_states
 {
 	renderer_state_data data = {};
 protected:
-	byte _padding[256 - sizeof renderer_state_data] = {};
+	byte _padding[256 - sizeof(renderer_state_data)] = {};
 };
 
 struct box_vertex_data
