@@ -14,14 +14,9 @@ jobs:
     steps:
     - name: Checkout code
       uses: actions/checkout@v4
-      with:
-        submodules: recursive
 
     - name: Setup MSBuild
       uses: microsoft/setup-msbuild@v2
-
-    - name: Restore NuGet packages
-      run: nuget restore "vpl generator.sln"
 
     - name: Build solution
       run: msbuild "vpl generator.sln" /p:Configuration=Release /p:Platform=x64 /m
